@@ -1,25 +1,31 @@
+import React from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 export function Navbar() {
-  const isAdmin = false;
-
   return (
     <ul>
       <li>
-        <a>
+        <Link to="/">
           <h3 className="title">Mock Shop</h3>
-        </a>
+        </Link>
       </li>
       <li>
-        <a href="/shoes">Shoes</a>
+        <Link to="/shoes">Shoes</Link>
       </li>
+      {/* <li>
+        <Link to="/sale">Sale</Link>
+      </li> */}
       <li>
-        <a>Sale</a>
+        <Link to="/blog">Blog</Link>
       </li>
-      <li>
-        <a>Blog</a>
-      </li>
-      <li>{isAdmin && <a className="admin">Administration</a>}</li>
+      {sessionStorage.getItem("isAdmin") && (
+        <li>
+          <Link to="/admin" className="admin">
+            Administration
+          </Link>
+        </li>
+      )}
     </ul>
   );
 }

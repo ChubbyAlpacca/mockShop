@@ -1,26 +1,29 @@
-import vintagePhoto from "./assets/vintage_stuff.jpeg";
-import { Navbar } from "./features/Navbar";
+import ReactDOM from "react-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Blog from "./pages/Blog";
+import { Shoes } from "./pages/Shoes";
 import { shoesData } from "./data/shoesData";
-import { Shoes } from "./pages/shoes";
+import Home from "./pages/Home";
+import NoPage from "./pages/NoPage";
+import Layout from "./pages/Layout";
+import Admin from "./pages/Admin";
 
-import "./App.css";
+export default function App() {
+  sessionStorage.setItem("isAdmin", "false");
 
-function App() {
   return (
-    <>
-      <Navbar />
-      <div className="photoBorder">
-        <img src={vintagePhoto} alt="stuff" className="vintagePhoto" />
-      </div>
-      <Shoes shoes={shoesData} />
-    </>
-    /* <Routes>
-        <Route path="/shoes" element={<Shoes shoes={shoesData} />} />
-        <Route path="/sale" />
-        <Route path="/blog" />
-        {/* Add more routes as needed */
-    // </Routes> */}
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="shoes" element={<Shoes shoes={shoesData} />} />
+          <Route path="blog" element={<Blog />} />
+          <Route path="admin" element={<Admin />} />
+          <Route path="*" element={<NoPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
-export default App;
+ReactDOM.render(<App />, document.getElementById("root"));
