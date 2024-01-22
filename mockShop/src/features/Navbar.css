@@ -6,11 +6,15 @@ body {
   color: purple;
 }
 
+.admin {
+  color: red;
+}
+
 ul {
   list-style-type: none;
   display: inline-block;
   margin: 0;
-  padding: 0;
+  padding: 0, 0, 10px, 0;
   overflow: hidden;
   background-color: #ffffff;
   position: fixed;

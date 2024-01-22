@@ -17,6 +17,7 @@ interface ShoeTileProps {
 }
 
 const ShoeTile: React.FC<ShoeTileProps> = ({ shoe }) => {
+  console.log(shoe.imgPath);
   return (
     <div className="shoe-tile">
       <h2>{shoe.brand}</h2>

@@ -1,6 +1,8 @@
 import "./Navbar.css";
 
 export function Navbar() {
+  const isAdmin = false;
+
   return (
     <ul>
       <li>
@@ -17,6 +19,7 @@ export function Navbar() {
       <li>
         <a>Blog</a>
       </li>
+      <li>{isAdmin && <a className="admin">Administration</a>}</li>
     </ul>
   );
 }

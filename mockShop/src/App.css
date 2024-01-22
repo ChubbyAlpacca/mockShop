@@ -3,14 +3,14 @@
 }
 
 .vintagePhoto {
-  height: 30%;
+  height: 100%;
   width: 100%;
 }
 
-.photoBorder {
+/* .photoBorder {
   border-color: black;
   border-style: groove;
-}
+} */
 /* 
 .logo {
   height: 6em;
