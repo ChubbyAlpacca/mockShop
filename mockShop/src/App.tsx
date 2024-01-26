@@ -5,7 +5,7 @@ import { Shoes } from "./pages/Shoes";
 import { shoesData } from "./data/shoesData";
 import Home from "./pages/Home";
 import NoPage from "./pages/NoPage";
-import Layout from "./pages/Layout";
+import Layout from "./features/Header/Layout";
 import Admin from "./pages/Admin";
 
 export default function App() {

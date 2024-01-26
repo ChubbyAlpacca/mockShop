@@ -1,4 +1,5 @@
 import { Outlet, Link } from "react-router-dom";
+import "./css/Layout.css";
 
 const Layout = () => {
   return (
@@ -12,10 +13,12 @@ const Layout = () => {
             <Link to="/blog">Blog</Link>
           </li>
           <li>
-            <Link to="/shoes">Shoes</Link>
+            <Link to="/shoes">Products</Link>
           </li>
           <li>
-            <Link to="/admin">Administration</Link>
+            <Link to="/admin" className="admin">
+              Administration
+            </Link>
           </li>
         </ul>
       </nav>

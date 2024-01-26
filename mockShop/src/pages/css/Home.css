@@ -2,9 +2,12 @@
   background-color: antiquewhite;
 }
 
-.vintagePhoto {
-  height: 50%;
-  width: fit-content;
+.logo {
+  padding-top: 0cap;
+  filter: sepia(60%);
+  vertical-align: top;
+  height: 100%;
+  width: 100%;
 }
 
 /* .photoBorder {

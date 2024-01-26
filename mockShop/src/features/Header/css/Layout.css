@@ -1,13 +1,14 @@
-body {
+nav {
   margin: 0;
-}
-
-.title {
-  color: purple;
+  padding-bottom: 10px;
 }
 
 .admin {
   color: red;
+  border-style: dotted;
+  border-color: black;
+  border-radius: 100px;
+  padding: 1px, 1px, 1px, 1px;
 }
 
 ul {
@@ -20,10 +21,12 @@ ul {
   position: fixed;
   top: 0;
   width: 100%;
+  border-radius: 100px;
 }
 
 li {
   float: left;
+  border-radius: 100px;
 }
 
 li a {

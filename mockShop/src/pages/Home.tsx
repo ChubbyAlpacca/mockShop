@@ -1,16 +1,12 @@
-import { Navbar } from "../features/Navbar";
-import { shoesData } from "../data/shoesData";
-import { Shoes } from "./shoes";
-import "./Home.css";
+import vintagePhoto from "../assets/vintage_stuff.jpeg";
+import "./css/Home.css";
 
 function Home() {
   return (
     <>
-      <Navbar />
       <div className="photoBorder">
-        {/* <img src={vintagePhoto} alt="stuff" className="vintagePhoto" /> */}
+        <img src={vintagePhoto} alt="stuff" className="vintagePhoto" />
       </div>
-      <Shoes shoes={shoesData} />
     </>
   );
 }

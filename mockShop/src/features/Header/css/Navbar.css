@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.title {
+  color: purple;
+}
+
+.admin {
+  color: red;
+}
+
+ul {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0;
+  padding: 0, 0, 10px, 0;
+  overflow: hidden;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #d48d42;
+  color: black;
+}
+
+.active {
+  background-color: #d48d42;
+  color: black;
+}

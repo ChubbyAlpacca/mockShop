@@ -1,0 +1,54 @@
+/* Shoes.css */
+
+.shoe-list {
+  color: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-top: 40px;
+}
+
+.content {
+  padding-top: 40px;
+}
+.shoe-tile {
+  border: 1px solid #ffffff;
+  padding: 15px;
+  margin: 10px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 5px 5px 5px grey;
+  border-radius: 10px;
+  background: #ffffffa3;
+}
+
+.shoe-tile img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.shoe-tile h2 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.shoe-tile h3 {
+  font-size: 1.1em;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.shoe-tile p {
+  margin-bottom: 10px;
+}
+
+.shoe-tile p .sale-price {
+  color: red; /* Customize the color for the sale price */
+}
+
+.shoe-tile img {
+  border-color: black;
+  border-radius: 10px;
+  border-style: ridge;
+}
