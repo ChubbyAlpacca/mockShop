@@ -15,7 +15,7 @@ interface ShoeTileProps {
   shoe: Shoe;
 }
 
-const ShoeTile: React.FC<ShoeTileProps> = ({ shoe }) => {
+const ShoeTile: React.FC<ShoeTileProps> = ({ shoe: Shoe }) => {
   const [imgSrc, setImgSrc] = useState<string | null>(null);
 
   useEffect(() => {
@@ -47,20 +47,20 @@ const ShoeTile: React.FC<ShoeTileProps> = ({ shoe }) => {
   );
 };
 
-interface ShoeListProps {
-  shoes: Shoe[];
-}
+// interface ShoeListProps {
+//   shoes: Shoe[];
+// };
 
-export const Shoes: React.FC<ShoeListProps> = ({ shoes }) => {
-  return (
-    <>
-      <div className="content">
-        <div className="shoe-list">
-          {shoes.map((shoe, index) => (
-            <ShoeTile key={index} shoe={shoe} />
-          ))}
-        </div>
-      </div>
-    </>
-  );
-};
+// export const Shoes: React.FC<ShoeListProps> = ({ shoes }) => {
+//   return (
+//     <>
+//       <div className="content">
+//         <div className="shoe-list">
+//           {shoes.map((shoe, index) => (
+//             <ShoeTile key={index} shoe={shoe} />
+//           ))}
+//         </div>
+//       </div>
+//     </>
+//   );
+// };

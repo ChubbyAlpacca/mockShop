@@ -8,9 +8,11 @@ import NoPage from "./pages/NoPage";
 import Layout from "./features/Header/Layout";
 import Admin from "./pages/Admin";
 
-export default function App() {
-  sessionStorage.setItem("isAdmin", "false");
+sessionStorage.setItem("isAdmin", "false");
 
+const isAdmin = false;
+
+export default function App({ isAdmin }) {
   return (
     <BrowserRouter>
       <Routes>
@@ -18,7 +20,11 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="shoes" element={<Shoes shoes={shoesData} />} />
           <Route path="blog" element={<Blog />} />
-          <Route path="admin" element={<Admin />} />
+          {isAdmin ? (
+            <Route path="admin" element={<Admin />} />
+          ) : (
+            <Route path="*" element={<NoPage />} />
+          )}
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
